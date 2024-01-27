@@ -5,10 +5,10 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f;
-    public KeyCode upKey;
-    public KeyCode downKey;
-    public KeyCode leftKey;
-    public KeyCode rightKey;
+    [SerializeField] public KeyCode upKey;
+    [SerializeField] public KeyCode downKey;
+    [SerializeField] public KeyCode leftKey;
+    [SerializeField] public KeyCode rightKey;
 
     void Update()
     {

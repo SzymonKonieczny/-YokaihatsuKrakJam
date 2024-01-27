@@ -6,6 +6,8 @@ using Interaction;
     public class NPCScript : MonoBehaviour, IInteraction
 {
     public NPC_SO NpcData;
+    public Vector3 Position => transform.position;
+
     public ItemID Interact(ItemID id)
     {
         throw new System.NotImplementedException();
