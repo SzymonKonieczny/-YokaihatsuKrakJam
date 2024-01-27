@@ -47,7 +47,7 @@ public class UnitManager : MonoBehaviour
     public void SpawnItemPair()
     {
 
-        ItemPair ItemPair = ItemIDPairs[UnityEngine.Random.Range(0, ItemIDPairs.Count - 1)];
+        ItemPair ItemPair = ItemIDPairs[UnityEngine.Random.Range(0, ItemIDPairs.Count)];
 
         GameObject Item1GO = Instantiate(ItemPrefab);
         Item1GO.transform.position = GetRandomTransform();
@@ -62,6 +62,6 @@ public class UnitManager : MonoBehaviour
     }
     public Vector3 GetRandomTransform()
     {
-        return Areas[UnityEngine.Random.Range(0, Areas.Count - 1)].getRandomSpot();
+        return Areas[UnityEngine.Random.Range(0, Areas.Count)].getRandomSpot();
     }
 }

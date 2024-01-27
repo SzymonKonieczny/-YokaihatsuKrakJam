@@ -59,6 +59,7 @@ using Interaction;
         NavAgent.updateRotation = false;
         NavAgent.updateUpAxis = false;
 
+        Destination = area.getRandomSpot();
     }
 
     void Update()
@@ -68,12 +69,12 @@ using Interaction;
         switch(State)
         {
             case NPC_State.Wondering:
-                if (Vector3.Distance(transform.position, Destination) < 0.1f)
+                if (Vector2.Distance(transform.position, Destination) < 0.1f)
                 {
                     Destination = area.getRandomSpot();
                 }
                 NavAgent.SetDestination(Destination);
-                if(TimeAlive>10.0f)
+                if(TimeAlive>500.0f)
                 {
                     State = NPC_State.GoingAway;
                     NavAgent.SetDestination(GameManager.Instance.DestinationPoints[UnityEngine.Random.Range(0,
