@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe9b97f8fa1b1a84eb7c29c25c438133, type: 3}
   m_Name: Laughing Gas
   m_EditorClassIdentifier: 
-  id: 2
+  id: 4
   Infuence: 0
-  Type: 1
+  Type: 3
   InfluenceValue: 0.05
-  sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  sprite: {fileID: 21300000, guid: a8e8eaa9d28d22e458c6597d53679b29, type: 3}
