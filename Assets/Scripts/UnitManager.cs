@@ -33,7 +33,8 @@ public class UnitManager : MonoBehaviour
         GameObject Item1GO = Instantiate(NPCPrefab);
         Item1GO.transform.position = GetRandomTransform();
         NPCScript NPC = Item1GO.GetComponent<NPCScript>();
-        NPC.SetData();
+        NPC.SetData(GameManager.Instance.NPCDataContainer[UnityEngine.Random.Range(0,
+            GameManager.Instance.NPCDataContainer.Count-1)]);
 
 
 
