@@ -59,6 +59,7 @@ using Interaction;
         NavAgent.updateRotation = false;
         NavAgent.updateUpAxis = false;
 
+        Destination = area.getRandomSpot();
     }
 
     void Update()
