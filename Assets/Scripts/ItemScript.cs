@@ -1,18 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class ItemScript : MonoBehaviour
+using Interaction;
+public class ItemScript : MonoBehaviour, IInteraction
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    Item_SO ItemData;
 
-    // Update is called once per frame
-    void Update()
+    public Vector3 Position => transform.position;
+
+    public ItemID Interact(ItemID id)
     {
-        
+
+        if (GameManager.Instance.ItemsContainer.Get(id).Type == NpcType.None)
+        {
+            return ItemData.id;
+        }
+        else return id;
     }
 }

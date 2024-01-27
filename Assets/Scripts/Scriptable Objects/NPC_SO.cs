@@ -11,7 +11,7 @@ public enum NpcType
 [CreateAssetMenu(fileName = "NewNpc", menuName = "ScriptableObjects/NPC_Data")]
 public class NPC_SO : ScriptableObject
 {
-   public NpcType Type;
+   public NpcType Type;    
     public AnimatorOverrideController AnimationOverride;
 
 }
