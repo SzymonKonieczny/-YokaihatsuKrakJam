@@ -9,6 +9,10 @@ public class CameraController : MonoBehaviour
     public float smoothSpeed = 0.125f;
     public float minOrthoSize = 5f;
     public float maxOrthoSize = 10f;
+    public float minX = -10f;
+    public float maxX = 10f;
+    public float minY = -5f;
+    public float maxY = 5f;
 
     private Camera cameraComponent;
 
@@ -33,8 +37,11 @@ public class CameraController : MonoBehaviour
             // Oblicz środek pomiędzy dwoma graczami
             Vector3 centerPoint = (player1.position + player2.position) / 2f;
 
-            // Ustaw pozycję kamery na środek pomiędzy graczami
-            transform.position = new Vector3(centerPoint.x, centerPoint.y, transform.position.z);
+            float clampedX = Mathf.Clamp(centerPoint.x, minX, maxX);
+            float clampedY = Mathf.Clamp(centerPoint.y, minY, maxY);
+
+            // Ustaw pozycję kamery na środek pomiędzy graczami, uwzględniając ograniczenia
+            transform.position = new Vector3(clampedX, clampedY, transform.position.z);
         }
     }
 }
