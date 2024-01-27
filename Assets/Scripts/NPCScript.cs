@@ -18,7 +18,10 @@ using Interaction;
 
 
     public float MoveDir;
-
+    public void SetData(NPC_SO Data)
+    {
+        NpcData = Data;
+    }
     public ItemID Interact(ItemID id)
     {
         if (GameManager.Instance.ItemsContainer.Get(id).Type == NpcData.Type)

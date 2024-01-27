@@ -4,10 +4,12 @@ using UnityEngine;
 using Interaction;
 public class ItemScript : MonoBehaviour, IInteraction
 {
+    [SerializeField] Sprite sprite;
     Item_SO ItemData;
     public void setItemData(ItemID id)
     {
         ItemData = GameManager.Instance.ItemsContainer.Get(id);
+        sprite = ItemData.sprite;
     }
     public Vector3 Position => transform.position;
 
@@ -16,9 +18,16 @@ public class ItemScript : MonoBehaviour, IInteraction
 
         if (GameManager.Instance.ItemsContainer.Get(id).Type == NpcType.None)
         {
+            Destroy(this);
             return ItemData.id;
         }
-        else return id;
+        else
+        {
+            Destroy(this);
+
+            return id;
+
+        }
     }
 
     public void Highlight()

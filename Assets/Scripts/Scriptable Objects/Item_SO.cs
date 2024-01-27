@@ -15,4 +15,5 @@ public class Item_SO : ScriptableObject
     public HappinessInfluence Infuence;
      public NpcType Type;
      public float InfluenceValue = 0.05f;
+    public Sprite sprite;
 }

@@ -5,5 +5,9 @@ using UnityEngine;
 public enum ItemID 
 {
     Empty = 0,
+    AirHorn,
+    SqueakyChicken,
+    PepperSpray,
+    LaughingGas
     
 }
