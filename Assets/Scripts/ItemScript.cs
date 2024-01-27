@@ -18,9 +18,16 @@ public class ItemScript : MonoBehaviour, IInteraction
 
         if (GameManager.Instance.ItemsContainer.Get(id).Type == NpcType.None)
         {
+            Destroy(this);
             return ItemData.id;
         }
-        else return id;
+        else
+        {
+            Destroy(this);
+
+            return id;
+
+        }
     }
 
     public void Highlight()
