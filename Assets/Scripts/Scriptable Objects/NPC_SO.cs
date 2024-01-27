@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-enum NpcType
+public enum NpcType
 {
     None,
     Hearing,
@@ -11,7 +11,7 @@ enum NpcType
 [CreateAssetMenu(fileName = "NewNpc", menuName = "ScriptableObjects/NPC_Data")]
 public class NPC_SO : ScriptableObject
 {
-    NpcType Type;
-    
+   public NpcType Type;
+    public AnimatorOverrideController AnimationOverride;
 
 }
