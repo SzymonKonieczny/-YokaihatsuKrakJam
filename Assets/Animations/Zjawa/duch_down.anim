@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Tesciowa_idle
+  m_Name: duch_down
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,9 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -1083702317, guid: 7500802c4fe6b9f43a4fcd12abc250b4, type: 3}
+      value: {fileID: 1237416546, guid: cb795f065decc9948bb1dd32450a9983, type: 3}
     - time: 0.016666668
-      value: {fileID: -1304699115, guid: 7500802c4fe6b9f43a4fcd12abc250b4, type: 3}
+      value: {fileID: -755561713, guid: cb795f065decc9948bb1dd32450a9983, type: 3}
+    - time: 0.033333335
+      value: {fileID: -1307064050, guid: cb795f065decc9948bb1dd32450a9983, type: 3}
+    - time: 0.05
+      value: {fileID: 269243866, guid: cb795f065decc9948bb1dd32450a9983, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -46,14 +50,16 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -1083702317, guid: 7500802c4fe6b9f43a4fcd12abc250b4, type: 3}
-    - {fileID: -1304699115, guid: 7500802c4fe6b9f43a4fcd12abc250b4, type: 3}
+    - {fileID: 1237416546, guid: cb795f065decc9948bb1dd32450a9983, type: 3}
+    - {fileID: -755561713, guid: cb795f065decc9948bb1dd32450a9983, type: 3}
+    - {fileID: -1307064050, guid: cb795f065decc9948bb1dd32450a9983, type: 3}
+    - {fileID: 269243866, guid: cb795f065decc9948bb1dd32450a9983, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.033333335
+    m_StopTime: 0.06666667
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
