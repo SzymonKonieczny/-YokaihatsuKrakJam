@@ -4,12 +4,12 @@ using UnityEngine;
 using Interaction;
 public class ItemScript : MonoBehaviour, IInteraction
 {
-    [SerializeField] Sprite sprite;
+    [SerializeField] SpriteRenderer sprite;
     Item_SO ItemData;
     public void setItemData(ItemID id)
     {
         ItemData = GameManager.Instance.ItemsContainer.Get(id);
-        sprite = ItemData.sprite;
+        sprite.sprite = ItemData.sprite;
     }
     public Vector3 Position => transform.position;
 
