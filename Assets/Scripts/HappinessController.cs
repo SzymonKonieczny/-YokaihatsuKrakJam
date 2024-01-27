@@ -16,11 +16,9 @@ public class HappinessController : MonoBehaviour
         if (Instance == null)
             Instance = this;
     }
-
-    public void Change(ItemID id)
+    public void Change(float value)
     {
-        var item = GameManager.Instance.ItemsContainer.Get(id);
-        _value += item.Infuence == HappinessInfluence.Positive ? item.InfluenceValue : -item.InfluenceValue;
+        _value += value;
         slider.Set(_value);
         if (_value >= 1f)
         {

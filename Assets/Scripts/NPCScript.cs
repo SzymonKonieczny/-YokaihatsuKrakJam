@@ -11,8 +11,15 @@ using Interaction;
     Wondering,
     GoingAway
 }
+enum Mood
+{
+    Sad=-1,
+    Neutral,
+    Happy
+}
     public class NPCScript : MonoBehaviour, IInteraction
 {
+    Mood mood = Mood.Neutral;
     NPC_State State = NPC_State.Wondering;
     public float TimeAlive = 0.0f;
     public NPC_SO NpcData;
@@ -33,11 +40,11 @@ using Interaction;
     }
     public ItemID Interact(ItemID id)
     {
-        if (GameManager.Instance.ItemsContainer.Get(id).Type == NpcData.Type)
+        Item_SO item = GameManager.Instance.ItemsContainer.Get(id);
+        if (item.Type == NpcData.Type)
         {
-            HappinessController.Instance.Change(id);
-            //to do, affect the happiness inflience bar 
-            // GameManager.Instance.ItemsContainer.Get(id).Infuence
+            mood = (item.Infuence == HappinessInfluence.Positive) ? Mood.Happy : Mood.Sad;
+
             return ItemID.Empty;
         }
         else return id;
@@ -65,8 +72,9 @@ using Interaction;
     void Update()
     {
         TimeAlive += Time.deltaTime;
+        HappinessController.Instance.Change(0.1f * (int)mood * Time.deltaTime);
 
-        switch(State)
+        switch (State)
         {
             case NPC_State.Wondering:
                 if (Vector2.Distance(transform.position, Destination) < 0.1f)
