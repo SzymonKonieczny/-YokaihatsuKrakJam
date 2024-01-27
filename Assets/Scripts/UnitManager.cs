@@ -1,12 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
+[Serializable]
+public struct ItemPair
+{
+public ItemID PositiveItem;
+public ItemID NegativeItem;
+}
 public class UnitManager : MonoBehaviour
 {
     List<BoundingArea> Areas = new List<BoundingArea>();
    public List<Transform> TransformsAreas = new List<Transform>();
-    public List<Vector2Int> ItemIDPairs = new List<Vector2Int>();
+    public List<ItemPair> ItemIDPairs = new List<ItemPair>();
+    [SerializeField] GameObject ItemPrefab;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,10 +22,30 @@ public class UnitManager : MonoBehaviour
         {
             Areas.Add(new BoundingArea(TransformsAreas[i], TransformsAreas[i + 1]));
         }
+        SpawnItemPair();
     }
+    public void SpawnItemPair()
+    {
 
+        ItemPair ItemPair = ItemIDPairs[UnityEngine.Random.Range(0, ItemIDPairs.Count - 1)];
+
+        GameObject Item1GO = Instantiate(ItemPrefab);
+        Item1GO.transform.position = GetRandomTransform();
+        ItemScript Item1 = Item1GO.GetComponent<ItemScript>();
+        Item1.setItemData(ItemPair.PositiveItem);
+
+        GameObject Item2GO = Instantiate(ItemPrefab);
+        Item2GO.transform.position = GetRandomTransform();
+        ItemScript Item2 = Item2GO.GetComponent<ItemScript>();
+        Item2.setItemData(ItemPair.NegativeItem);
+
+    }
+    public void SpawnNPC()
+    {
+
+    }
     public Vector3 GetRandomTransform()
     {
-        return Areas[Random.Range(0, Areas.Count - 1)].getRandomSpot();
+        return Areas[UnityEngine.Random.Range(0, Areas.Count - 1)].getRandomSpot();
     }
 }
