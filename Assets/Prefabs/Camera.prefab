@@ -790,9 +790,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1: {fileID: 0}
   player2: {fileID: 0}
-  smoothSpeed: 0.125
+  smoothSpeed: 1
   minOrthoSize: 5
-  maxOrthoSize: 10
+  maxOrthoSize: 7
+  minX: -1.7
+  maxX: 3.9
+  minY: -7.9
+  maxY: 8.73
 --- !u!114 &2590203132493589
 MonoBehaviour:
   m_ObjectHideFlags: 0
