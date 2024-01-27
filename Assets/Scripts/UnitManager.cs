@@ -26,27 +26,34 @@ public class UnitManager : MonoBehaviour
         }
         SpawnItemPair();
     }
-    public void SpawnItemPair()
+    public void SpawnNPC()
     {
 
 
-        GameObject Item1GO = Instantiate(NPCPrefab);
-        Item1GO.transform.position = GetRandomTransform();
-        NPCScript NPC = Item1GO.GetComponent<NPCScript>();
+        GameObject NpcGO = Instantiate(NPCPrefab);
+        NpcGO.transform.position = GetRandomTransform();
+        NPCScript NPC = NpcGO.GetComponent<NPCScript>();
         NPC.SetData(GameManager.Instance.NPCDataContainer[UnityEngine.Random.Range(0,
             GameManager.Instance.NPCDataContainer.Count-1)]);
 
 
 
     }
-    public void SpawnNPC()
+    public void SpawnItemPair()
     {
+
         ItemPair ItemPair = ItemIDPairs[UnityEngine.Random.Range(0, ItemIDPairs.Count - 1)];
 
         GameObject Item1GO = Instantiate(ItemPrefab);
         Item1GO.transform.position = GetRandomTransform();
         ItemScript Item1 = Item1GO.GetComponent<ItemScript>();
         Item1.setItemData(ItemPair.PositiveItem);
+
+        GameObject Item2GO = Instantiate(ItemPrefab);
+        Item2GO.transform.position = GetRandomTransform();
+        ItemScript Item2 = Item2GO.GetComponent<ItemScript>();
+        Item2.setItemData(ItemPair.NegativeItem);
+
     }
     public Vector3 GetRandomTransform()
     {
