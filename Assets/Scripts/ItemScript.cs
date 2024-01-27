@@ -5,7 +5,10 @@ using Interaction;
 public class ItemScript : MonoBehaviour, IInteraction
 {
     Item_SO ItemData;
-
+    public void setItemData(ItemID id)
+    {
+        ItemData = GameManager.Instance.ItemsContainer.Get(id);
+    }
     public Vector3 Position => transform.position;
 
     public ItemID Interact(ItemID id)
