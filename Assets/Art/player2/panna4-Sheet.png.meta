@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 27b30d4aa1a77a044b82f6019bd765b0
+guid: ddecd4fe4e5d8af4bb6b0a6fe690d2eb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,20 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    ignorePlatformSupport: 0
-    androidETC2FallbackOverride: 0
-    forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
-    buildTarget: WebGL
-    maxTextureSize: 2048
+    maxTextureSize: 64
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -123,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tesciowa2-Sheet-Sheet_0
+      name: panna4-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +124,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 49d1926cdb0582049917e635f5f703a0
-      internalID: -718502253
+      spriteID: 8ed8803a1e6283f4296ace36f5d91ffe
+      internalID: 286635140
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: tesciowa2-Sheet-Sheet_1
+      name: panna4-Sheet_1
       rect:
         serializedVersion: 2
         x: 32
@@ -158,50 +145,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7fe4e9a4c062e1343a8c443944816418
-      internalID: -273762468
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tesciowa2-Sheet-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b5db91ac00aab4b438a1a2a11750afe1
-      internalID: -475547615
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: tesciowa2-Sheet-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 958ae90e192e72d4193076b384833598
-      internalID: -699201831
+      spriteID: dd082179157ddc24c8baa730aad2e530
+      internalID: -395734562
       vertices: []
       indices: 
       edges: []
@@ -217,10 +162,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      tesciowa2-Sheet-Sheet_0: -718502253
-      tesciowa2-Sheet-Sheet_1: -273762468
-      tesciowa2-Sheet-Sheet_2: -475547615
-      tesciowa2-Sheet-Sheet_3: -699201831
+      panna4-Sheet_0: 286635140
+      panna4-Sheet_1: -395734562
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
