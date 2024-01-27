@@ -5,8 +5,10 @@ using UnityEngine;
 
 [CreateAssetMenu(fileName = "NewItem", menuName = "ScriptableObjects/Item_Data")]
 
-public class Item_SO : MonoBehaviour
+public class Item_SO : ScriptableObject
 {
+    public ItemID id;
+    
     NpcType Type;
 
 }

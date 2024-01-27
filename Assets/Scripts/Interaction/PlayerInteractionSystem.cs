@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 namespace Interaction
@@ -9,7 +10,12 @@ namespace Interaction
         void Update()
         {
             var asd = Physics2D.OverlapCircleAll(transform.position, radius);
+        
+        }
 
+        private void OnTriggerStay2D(Collider2D other)
+        {
+            Debug.Log("asd");
         }
     }
 }
