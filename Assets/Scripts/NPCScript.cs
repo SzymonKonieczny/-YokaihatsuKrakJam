@@ -6,21 +6,29 @@ using UnityEngine.Animations;
 
 
 using Interaction;
- 
+ enum NPC_State
+{
+    Wondering,
+    GoingAway
+}
     public class NPCScript : MonoBehaviour, IInteraction
 {
+    NPC_State State = NPC_State.Wondering;
+    public float TimeAlive = 0.0f;
     public NPC_SO NpcData;
     NavMeshAgent NavAgent;
     Animator animator;
-    public Transform Destination;
+    BoundingArea area;
+    public Vector3 Destination;
 
     public Vector3 Position => transform.position;
 
 
     public float MoveDir;
-    public void SetData(NPC_SO Data)
+    public void SetData(NPC_SO Data, BoundingArea _area)
     {
         NpcData = Data;
+        area = _area;
     }
     public ItemID Interact(ItemID id)
     {
@@ -33,7 +41,7 @@ using Interaction;
         else return id;
 
     }
-
+    
     public void Highlight()
     {
     }
@@ -52,10 +60,34 @@ using Interaction;
 
     }
 
-    // Update is called once per frame
     void Update()
     {
-        NavAgent.SetDestination(Destination.position);
+        TimeAlive += Time.deltaTime;
+
+        switch(State)
+        {
+            case NPC_State.Wondering:
+                if (Vector3.Distance(transform.position, Destination) < 0.1f)
+                {
+                    Destination = area.getRandomSpot();
+                }
+                NavAgent.SetDestination(Destination);
+                if(TimeAlive>10.0f)
+                {
+                    State = NPC_State.GoingAway;
+                    NavAgent.SetDestination(GameManager.Instance.DestinationPoints[UnityEngine.Random.Range(0,
+                        GameManager.Instance.DestinationPoints.Count-1)].position);
+
+                }
+
+                break;
+            case NPC_State.GoingAway:
+
+                
+
+           break;
+        }
+
         animator.SetFloat("MoveDir", NavAgent.velocity.y);
         animator.SetBool("IsMoving", (NavAgent.velocity.magnitude > 0.05f));
     }
