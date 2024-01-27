@@ -6,5 +6,7 @@ namespace Interaction
     {
         Vector3 Position { get; }
         ItemID Interact(ItemID id);
+        void Highlight();
+        void Unhighlight();
     }
 }

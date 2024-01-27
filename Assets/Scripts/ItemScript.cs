@@ -17,4 +17,12 @@ public class ItemScript : MonoBehaviour, IInteraction
         }
         else return id;
     }
+
+    public void Highlight()
+    {
+    }
+
+    public void Unhighlight()
+    {
+    }
 }

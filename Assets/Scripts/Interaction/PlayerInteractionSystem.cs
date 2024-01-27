@@ -46,7 +46,10 @@ namespace Interaction
 
         private void SetNearest(IInteraction newNearest)
         {
+            if(!_nearestInteraction.Equals(default))
+                _nearestInteraction.Unhighlight();
             _nearestInteraction = newNearest;
+            _nearestInteraction.Highlight();
         }
 
         public Vector3 Position => transform.position;
@@ -54,6 +57,14 @@ namespace Interaction
         {
             Debug.Log($"Interaction {id} on {transform.name}");
             return ItemID.Empty;
+        }
+
+        public void Highlight()
+        {
+        }
+
+        public void Unhighlight()
+        {
         }
     }
 }
