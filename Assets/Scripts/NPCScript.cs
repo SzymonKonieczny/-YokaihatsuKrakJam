@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Animations;
+using UnityEngine.ParticleSystemJobs;
 
 
 using Interaction;
@@ -24,9 +25,13 @@ enum Mood
     public float TimeAlive = 0.0f;
     public NPC_SO NpcData;
     NavMeshAgent NavAgent;
+    public List<Sprite> HappyFrames = new List<Sprite>();
+    public List<Sprite> SadFrames = new List<Sprite>();
+
     [SerializeField] Animator animator;
     BoundingArea area;
     public Vector3 Destination;
+    [SerializeField] ParticleSystem Particles;
 
     public Vector3 Position => transform.position;
 
@@ -45,6 +50,17 @@ enum Mood
         {
             mood = (item.Infuence == HappinessInfluence.Positive) ? Mood.Happy : Mood.Sad;
 
+            for (int i = Particles.textureSheetAnimation.spriteCount-1; i >=0 ; i--)
+            {
+                Particles.textureSheetAnimation.RemoveSprite(i);
+            }
+
+            List<Sprite> Frames = (mood == Mood.Happy) ? HappyFrames : SadFrames;
+            for (int i = 0; i < Frames.Count; i++)
+            {
+                Particles.textureSheetAnimation.AddSprite(Frames[i]);
+            }
+            Particles.Play();
             return ItemID.Empty;
         }
         else return id;
@@ -66,6 +82,7 @@ enum Mood
         NavAgent.updateRotation = false;
         NavAgent.updateUpAxis = false;
 
+        Particles.Pause();
         Destination = area.getRandomSpot();
     }
 
