@@ -21,6 +21,7 @@ namespace Interaction
 
         private void Update()
         {
+            _currentInteractions = _currentInteractions.Where(p => p != null).ToList();
             var newNearest = _currentInteractions.OrderBy(p => Vector3.Distance(p.Position, transform.position)).FirstOrDefault();
             if (_nearestInteraction != newNearest)
                 SetNearest(newNearest);
