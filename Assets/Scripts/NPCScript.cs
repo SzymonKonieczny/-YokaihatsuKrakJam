@@ -74,7 +74,7 @@ using Interaction;
                     Destination = area.getRandomSpot();
                 }
                 NavAgent.SetDestination(Destination);
-                if(TimeAlive>10.0f)
+                if(TimeAlive>50.0f)
                 {
                     State = NPC_State.GoingAway;
                     NavAgent.SetDestination(GameManager.Instance.DestinationPoints[UnityEngine.Random.Range(0,
