@@ -31,17 +31,8 @@ namespace Interaction
                 if (_nearestInteraction != null && !_nearestInteraction.Equals(default))
                 {
                     var newItem = _nearestInteraction.Interact(currentItem);
-                    if (newItem == ItemID.Empty)
-                    {
-                        HappinessController.Instance.Change(currentItem);
-                        currentItem = newItem;
-                        CurrentItemUI.Instance.Set(currentItem, type);
-                    }
-                    else
-                    {
-                        currentItem = newItem;
-                        CurrentItemUI.Instance.Set(currentItem, type);
-                    }
+                    currentItem = newItem;
+                    CurrentItemUI.Instance.Set(currentItem, type);
                 }
             }
         }

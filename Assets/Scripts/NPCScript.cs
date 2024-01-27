@@ -34,6 +34,7 @@ using Interaction;
     {
         if (GameManager.Instance.ItemsContainer.Get(id).Type == NpcData.Type)
         {
+            HappinessController.Instance.Change(id);
             //to do, affect the happiness inflience bar 
             // GameManager.Instance.ItemsContainer.Get(id).Infuence
             return ItemID.Empty;

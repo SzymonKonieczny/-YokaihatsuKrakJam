@@ -25,6 +25,7 @@ public class UnitManager : MonoBehaviour
             Areas.Add(new BoundingArea(TransformsAreas[i], TransformsAreas[i + 1]));
         }
         SpawnItemPair();
+        SpawnNPC();
     }
     public void SpawnNPC()
     {
