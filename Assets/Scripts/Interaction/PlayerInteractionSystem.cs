@@ -13,6 +13,11 @@ namespace Interaction
         private IInteraction _nearestInteraction;
         [SerializeField] public KeyCode interactionKey;
 
+        private void Start()
+        {
+            CurrentItemUI.Instance.Set(currentItem);
+        }
+
         private void Update()
         {
             var newNearest = _currentInteractions.OrderBy(p => Vector3.Distance(p.Position, transform.position)).FirstOrDefault();
@@ -21,8 +26,16 @@ namespace Interaction
             
             if (Input.GetKeyDown(interactionKey))
             {
-                if(_nearestInteraction != null && !_nearestInteraction.Equals(default))
-                    currentItem = _nearestInteraction.Interact(currentItem);
+                if (_nearestInteraction != null && !_nearestInteraction.Equals(default))
+                {
+                    var newItem = _nearestInteraction.Interact(currentItem);
+                    if (newItem == ItemID.Empty)
+                    {
+                        HappinessController.Instance.Change(currentItem);
+                        currentItem = newItem;
+                        CurrentItemUI.Instance.Set(currentItem);
+                    }
+                }
             }
         }
 
@@ -46,17 +59,17 @@ namespace Interaction
 
         private void SetNearest(IInteraction newNearest)
         {
-            if(!_nearestInteraction.Equals(default))
+            if(_nearestInteraction != null)
                 _nearestInteraction.Unhighlight();
             _nearestInteraction = newNearest;
-            _nearestInteraction.Highlight();
+            _nearestInteraction?.Highlight();
         }
 
         public Vector3 Position => transform.position;
         public ItemID Interact(ItemID id)
         {
             Debug.Log($"Interaction {id} on {transform.name}");
-            return ItemID.Empty;
+            return id;
         }
 
         public void Highlight()
