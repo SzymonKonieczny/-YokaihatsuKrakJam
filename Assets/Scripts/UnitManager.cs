@@ -15,6 +15,8 @@ public class UnitManager : MonoBehaviour
    public List<Transform> TransformsAreas = new List<Transform>();
     public List<ItemPair> ItemIDPairs = new List<ItemPair>();
     [SerializeField] GameObject ItemPrefab;
+    [SerializeField] GameObject NPCPrefab;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,22 +29,23 @@ public class UnitManager : MonoBehaviour
     public void SpawnItemPair()
     {
 
+
+        GameObject Item1GO = Instantiate(NPCPrefab);
+        Item1GO.transform.position = GetRandomTransform();
+        NPCScript NPC = Item1GO.GetComponent<NPCScript>();
+        NPC.SetData();
+
+
+
+    }
+    public void SpawnNPC()
+    {
         ItemPair ItemPair = ItemIDPairs[UnityEngine.Random.Range(0, ItemIDPairs.Count - 1)];
 
         GameObject Item1GO = Instantiate(ItemPrefab);
         Item1GO.transform.position = GetRandomTransform();
         ItemScript Item1 = Item1GO.GetComponent<ItemScript>();
         Item1.setItemData(ItemPair.PositiveItem);
-
-        GameObject Item2GO = Instantiate(ItemPrefab);
-        Item2GO.transform.position = GetRandomTransform();
-        ItemScript Item2 = Item2GO.GetComponent<ItemScript>();
-        Item2.setItemData(ItemPair.NegativeItem);
-
-    }
-    public void SpawnNPC()
-    {
-
     }
     public Vector3 GetRandomTransform()
     {
