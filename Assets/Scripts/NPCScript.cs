@@ -17,7 +17,7 @@ using Interaction;
     public float TimeAlive = 0.0f;
     public NPC_SO NpcData;
     NavMeshAgent NavAgent;
-    Animator animator;
+    [SerializeField] Animator animator;
     BoundingArea area;
     public Vector3 Destination;
 
@@ -29,6 +29,7 @@ using Interaction;
     {
         NpcData = Data;
         area = _area;
+        animator.runtimeAnimatorController = Data.AnimationOverride;
     }
     public ItemID Interact(ItemID id)
     {
@@ -55,7 +56,6 @@ using Interaction;
     void Start()
     {
         NavAgent = GetComponent<NavMeshAgent>();
-        animator = GetComponent<Animator>();
         NavAgent.updateRotation = false;
         NavAgent.updateUpAxis = false;
 
@@ -77,7 +77,7 @@ using Interaction;
                 {
                     State = NPC_State.GoingAway;
                     NavAgent.SetDestination(GameManager.Instance.DestinationPoints[UnityEngine.Random.Range(0,
-                        GameManager.Instance.DestinationPoints.Count-1)].position);
+                        GameManager.Instance.DestinationPoints.Count)].position);
 
                 }
 
@@ -89,7 +89,9 @@ using Interaction;
            break;
         }
 
-        animator.SetFloat("MoveDir", NavAgent.velocity.y);
-        animator.SetBool("IsMoving", (NavAgent.velocity.magnitude > 0.05f));
+        animator.SetFloat("Vertical", NavAgent.velocity.y);
+        animator.SetFloat("Horizontal", NavAgent.velocity.x);
+
+        //animator.SetBool("IsMoving", (NavAgent.velocity.magnitude > 0.05f));
     }
 }

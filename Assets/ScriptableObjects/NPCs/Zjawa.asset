@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e87e1f2faf1a5c441aaa60e33f4b79a6, type: 3}
-  m_Name: ftygh
+  m_Name: Zjawa
   m_EditorClassIdentifier: 
-  Type: 1
-  AnimationOverride: {fileID: 0}
+  Type: 2
+  AnimationOverride: {fileID: 22100000, guid: ad4aa1cda7eea2e4ea87a306c4c72998, type: 2}

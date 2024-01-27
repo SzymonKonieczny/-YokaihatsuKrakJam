@@ -26,6 +26,10 @@ public class UnitManager : MonoBehaviour
         }
         SpawnItemPair();
         SpawnNPC();
+        SpawnItemPair();
+        SpawnNPC();
+        SpawnItemPair();
+        SpawnNPC();
     }
     public void SpawnNPC()
     {
@@ -35,7 +39,7 @@ public class UnitManager : MonoBehaviour
         NpcGO.transform.position = GetRandomTransform();
         NPCScript NPC = NpcGO.GetComponent<NPCScript>();
         NPC.SetData(GameManager.Instance.NPCDataContainer[UnityEngine.Random.Range(0,
-        GameManager.Instance.NPCDataContainer.Count-1)],Areas[UnityEngine.Random.Range(0,Areas.Count-1)]);
+        GameManager.Instance.NPCDataContainer.Count)],Areas[UnityEngine.Random.Range(0,Areas.Count)]);
 
 
 
