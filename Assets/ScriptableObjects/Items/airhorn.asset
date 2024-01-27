@@ -15,4 +15,5 @@ MonoBehaviour:
   id: 1
   Infuence: 1
   Type: 1
-  sprite: {fileID: 0}
+  InfluenceValue: 0.05
+  sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}

@@ -8,6 +8,7 @@ namespace Interaction
     public class PlayerInteractionSystem : MonoBehaviour, IInteraction
     {
         private ItemID currentItem;
+        [SerializeField] private PlayerType type;
         public float radius = 2f;
         private List<IInteraction> _currentInteractions  = new List<IInteraction>();
         private IInteraction _nearestInteraction;
@@ -15,7 +16,7 @@ namespace Interaction
 
         private void Start()
         {
-            CurrentItemUI.Instance.Set(currentItem);
+            CurrentItemUI.Instance.Set(currentItem, type);
         }
 
         private void Update()
@@ -33,7 +34,12 @@ namespace Interaction
                     {
                         HappinessController.Instance.Change(currentItem);
                         currentItem = newItem;
-                        CurrentItemUI.Instance.Set(currentItem);
+                        CurrentItemUI.Instance.Set(currentItem, type);
+                    }
+                    else
+                    {
+                        currentItem = newItem;
+                        CurrentItemUI.Instance.Set(currentItem, type);
                     }
                 }
             }
@@ -43,7 +49,7 @@ namespace Interaction
         {
             if (other.TryGetComponent(out IInteraction interaction))
             {
-                if ((PlayerInteractionSystem)interaction != this)
+                if (interaction != this)
                     _currentInteractions.Add(interaction);
             }
         }
@@ -52,7 +58,7 @@ namespace Interaction
         {
             if (other.TryGetComponent(out IInteraction interaction))
             {
-                if ((PlayerInteractionSystem)interaction != this)
+                if (interaction != this)
                     _currentInteractions.Remove(interaction);
             }
         }

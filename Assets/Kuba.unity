@@ -277,10 +277,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 4312522600277361047, guid: 8db0a7b7ca2f59e429c35bdb4c2fa384, type: 3}
-      propertyPath: interactionKey
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5607324067733156191, guid: 8db0a7b7ca2f59e429c35bdb4c2fa384, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.58
@@ -483,6 +479,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 8280712658337857786, guid: 730f30c1067272645bcb20a85c7940d5, type: 3}
+      propertyPath: NPCDataContainer.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8280712658337857786, guid: 730f30c1067272645bcb20a85c7940d5, type: 3}
+      propertyPath: NPCDataContainer.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9939d7a23b5139140b6ed980f8596f9b, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -501,6 +505,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2180456127546078230, guid: 1dac820734df6d949990f5da4231bd84, type: 3}
+      propertyPath: NPCPrefab
+      value: 
+      objectReference: {fileID: 4568375133930057993, guid: a9fd7ef6595e2f24b8a601051c2711e5, type: 3}
+    - target: {fileID: 2180456127546078230, guid: 1dac820734df6d949990f5da4231bd84, type: 3}
+      propertyPath: ItemIDPairs.Array.data[0].NegativeItem
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180456127546078230, guid: 1dac820734df6d949990f5da4231bd84, type: 3}
+      propertyPath: ItemIDPairs.Array.data[0].PositiveItem
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3574138989966232844, guid: 1dac820734df6d949990f5da4231bd84, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.2744975
@@ -561,6 +577,10 @@ PrefabInstance:
     - target: {fileID: 4730969607938920846, guid: 90ecf28974b0d1d4cb2b0d10cd359de8, type: 3}
       propertyPath: m_Name
       value: Player2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5347764553404904809, guid: 90ecf28974b0d1d4cb2b0d10cd359de8, type: 3}
+      propertyPath: type
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5411388682052690879, guid: 90ecf28974b0d1d4cb2b0d10cd359de8, type: 3}
       propertyPath: m_LocalPosition.x

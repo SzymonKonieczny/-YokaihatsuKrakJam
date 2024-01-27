@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   radius: 2
-  interactionKey: 0
+  interactionKey: 13
 --- !u!50 &5437946756065730046
 Rigidbody2D:
   serializedVersion: 4
