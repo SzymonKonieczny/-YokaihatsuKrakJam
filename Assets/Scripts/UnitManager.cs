@@ -30,6 +30,11 @@ public class UnitManager : MonoBehaviour
         SpawnNPC();
         SpawnItemPair();
         SpawnNPC();
+        SpawnNPC();
+        SpawnNPC();
+        SpawnNPC();
+        SpawnNPC();
+
     }
     public void SpawnNPC()
     {
