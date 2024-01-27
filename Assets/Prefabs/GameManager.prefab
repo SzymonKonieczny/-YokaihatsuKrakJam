@@ -45,3 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ItemsContainer: {fileID: 11400000, guid: 0aa2db99e9ba21543b19e10ed1ae25cf, type: 2}
+  NPCDataContainer:
+  - {fileID: 11400000, guid: 9939d7a23b5139140b6ed980f8596f9b, type: 2}
+  - {fileID: 11400000, guid: d66a5f7269ebb6e40a51c7a9b6352c88, type: 2}
+  - {fileID: 11400000, guid: 880b34507131c4c4baffa9833ff176aa, type: 2}
+  DestinationPoints:
+  - {fileID: 0}

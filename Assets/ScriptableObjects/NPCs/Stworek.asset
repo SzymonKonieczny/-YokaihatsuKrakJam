@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e87e1f2faf1a5c441aaa60e33f4b79a6, type: 3}
   m_Name: Stworek
   m_EditorClassIdentifier: 
-  Type: 1
+  Type: 2
   AnimationOverride: {fileID: 22100000, guid: 6ff3f9fe9cb3225498506d77aecbe918, type: 2}

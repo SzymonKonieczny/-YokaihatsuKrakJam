@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Duch
+  m_Controller: {fileID: 9100000, guid: 5312d31c12be70542930825077a56cbf, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 06aefa0bd1326314ca3ab433c03ae053, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e26069cba0af1a048ad92f0e9583464c, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: fe55f89bc4678a2449888d64ed209b12, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 99fd3fb4a05846947a3beccd26ed01c3, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 95f8115aad450b645b3bb1e7cbb8e59b, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 632f8d60ed666864c9ce6136b605fcb9, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: e3d784f18890b69418e55d901c707870, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 084c1442185c9a84e980c0bfd374052f, type: 2}

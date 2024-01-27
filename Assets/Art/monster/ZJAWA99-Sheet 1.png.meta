@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cb795f065decc9948bb1dd32450a9983
+guid: 95f7c9bc1d7be064c9bc3bfc506b191b
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -69,7 +69,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 128
+    maxTextureSize: 64
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
@@ -123,7 +123,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ZJAWA1-Sheet_0
+      name: ZJAWA99-Sheet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -137,14 +137,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c87924b3c014a5c42b61c70c890a0f4a
-      internalID: 1237416546
+      spriteID: 5a9fba7adbafbd145bfca431e02edf64
+      internalID: -401020981
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ZJAWA1-Sheet_1
+      name: ZJAWA99-Sheet_1
       rect:
         serializedVersion: 2
         x: 32
@@ -158,50 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 394727c343d35904692d59952b4fb83e
-      internalID: -755561713
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ZJAWA1-Sheet_2
-      rect:
-        serializedVersion: 2
-        x: 64
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 314af54618eed124ea382bdee90f402e
-      internalID: -1307064050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: ZJAWA1-Sheet_3
-      rect:
-        serializedVersion: 2
-        x: 96
-        y: 0
-        width: 32
-        height: 32
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 46630abe78236624db2168e8817644ae
-      internalID: 269243866
+      spriteID: 311179df757e7754584701f17a56f842
+      internalID: -168944954
       vertices: []
       indices: 
       edges: []
@@ -217,10 +175,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ZJAWA1-Sheet_0: 1237416546
-      ZJAWA1-Sheet_1: -755561713
-      ZJAWA1-Sheet_2: -1307064050
-      ZJAWA1-Sheet_3: 269243866
+      ZJAWA99-Sheet_0: -401020981
+      ZJAWA99-Sheet_1: -168944954
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
