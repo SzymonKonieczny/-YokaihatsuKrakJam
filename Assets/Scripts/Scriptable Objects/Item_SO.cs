@@ -12,7 +12,7 @@ public enum HappinessInfluence
 public class Item_SO : ScriptableObject
 {
     public ItemID id;
-    HappinessInfluence Infuence;
+    public HappinessInfluence Infuence;
      public NpcType Type;
-
+     public float InfluenceValue = 0.05f;
 }
