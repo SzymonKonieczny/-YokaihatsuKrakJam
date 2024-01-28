@@ -295,7 +295,7 @@ Transform:
   m_GameObject: {fileID: 194607312}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.07, y: 7.89, z: -0.02160045}
+  m_LocalPosition: {x: 0.9, y: 11.29, z: -0.02160045}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -468,6 +468,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2098705644 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2180456127546078230, guid: 1dac820734df6d949990f5da4231bd84, type: 3}
+  m_PrefabInstance: {fileID: 6664998835309228628}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ff0e96865ce7e5c4fb63592d690504f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &529789093544385927
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -687,6 +698,10 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 8280712658337857786, guid: 730f30c1067272645bcb20a85c7940d5, type: 3}
+      propertyPath: unitManager
+      value: 
+      objectReference: {fileID: 2098705644}
+    - target: {fileID: 8280712658337857786, guid: 730f30c1067272645bcb20a85c7940d5, type: 3}
       propertyPath: NPCDataContainer.Array.size
       value: 3
       objectReference: {fileID: 0}
@@ -733,6 +748,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4568375133930057993, guid: a9fd7ef6595e2f24b8a601051c2711e5, type: 3}
     - target: {fileID: 2180456127546078230, guid: 1dac820734df6d949990f5da4231bd84, type: 3}
+      propertyPath: ItemIDPairs.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180456127546078230, guid: 1dac820734df6d949990f5da4231bd84, type: 3}
       propertyPath: TransformsAreas.Array.size
       value: 2
       objectReference: {fileID: 0}
@@ -747,6 +766,14 @@ PrefabInstance:
     - target: {fileID: 2180456127546078230, guid: 1dac820734df6d949990f5da4231bd84, type: 3}
       propertyPath: ItemIDPairs.Array.data[0].PositiveItem
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180456127546078230, guid: 1dac820734df6d949990f5da4231bd84, type: 3}
+      propertyPath: ItemIDPairs.Array.data[1].NegativeItem
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2180456127546078230, guid: 1dac820734df6d949990f5da4231bd84, type: 3}
+      propertyPath: ItemIDPairs.Array.data[1].PositiveItem
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3574138989966232844, guid: 1dac820734df6d949990f5da4231bd84, type: 3}
       propertyPath: m_LocalPosition.x

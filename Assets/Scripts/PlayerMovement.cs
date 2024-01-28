@@ -5,6 +5,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 5f;
+    public float stunTime = 0.0f;
+
     [SerializeField] public KeyCode upKey;
     [SerializeField] public KeyCode downKey;
     [SerializeField] public KeyCode leftKey;

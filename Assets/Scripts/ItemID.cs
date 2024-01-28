@@ -8,6 +8,8 @@ public enum ItemID
     AirHorn,
     SqueakyChicken,
     PepperSpray,
-    LaughingGas
+    LaughingGas,
+    Feather,
+    Hammer
     
 }

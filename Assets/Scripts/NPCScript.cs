@@ -99,7 +99,7 @@ enum Mood
                     Destination = area.getRandomSpot();
                 }
                 NavAgent.SetDestination(Destination);
-                if(TimeAlive>500.0f)
+                if(TimeAlive>30.0f)
                 {
                     State = NPC_State.GoingAway;
                     NavAgent.SetDestination(GameManager.Instance.DestinationPoints[UnityEngine.Random.Range(0,

@@ -16,4 +16,5 @@ public class Item_SO : ScriptableObject
      public NpcType Type;
      public float InfluenceValue = 0.05f;
     public Sprite sprite;
+    public Color color;
 }

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe9b97f8fa1b1a84eb7c29c25c438133, type: 3}
-  m_Name: Laughing Gas
+  m_Name: Hammer
   m_EditorClassIdentifier: 
-  id: 0
+  id: 6
   Infuence: 0
-  Type: 3
+  Type: 0
   InfluenceValue: 0.05
-  sprite: {fileID: 21300000, guid: a8e8eaa9d28d22e458c6597d53679b29, type: 3}
-  color: {r: 0.6981132, g: 0.67176664, b: 0.46233532, a: 1}
+  sprite: {fileID: 21300000, guid: 4a53894edb769684eaa101eb3c2be70d, type: 3}
+  color: {r: 0, g: 0, b: 0, a: 0}

@@ -6,10 +6,15 @@ public class ItemScript : MonoBehaviour, IInteraction
 {
     [SerializeField] SpriteRenderer sprite;
     Item_SO ItemData;
+    private void Start()
+    {
+        Destroy(this.gameObject, 20f);
+    }
     public void setItemData(ItemID id)
     {
-        ItemData = GameManager.Instance.ItemsContainer.Get(id);
+        ItemData = GameManager.Instance.ItemsContainer.Get(id); //zaciaga jakims hujem nulla ;-;
         sprite.sprite = ItemData.sprite;
+        sprite.color = ItemData.color;
     }
     public Vector3 Position => transform.position;
 

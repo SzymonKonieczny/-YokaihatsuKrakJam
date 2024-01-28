@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe9b97f8fa1b1a84eb7c29c25c438133, type: 3}
   m_Name: Chicken
   m_EditorClassIdentifier: 
-  id: 2
+  id: 0
   Infuence: 0
   Type: 1
   InfluenceValue: 0.05
   sprite: {fileID: 21300000, guid: 6215c4f1d681e854388d20a9679971a0, type: 3}
+  color: {r: 0.6981132, g: 0.67176664, b: 0.46233532, a: 1}
