@@ -96,7 +96,7 @@ enum Mood
     void Update()
     {
         TimeAlive += Time.deltaTime;
-        HappinessController.Instance.Change(0.01f * (int)mood * Time.deltaTime);
+        HappinessController.Instance.Change(0.005f * (int)mood * Time.deltaTime);
 
         switch (State)
         {
