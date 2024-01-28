@@ -161,6 +161,7 @@ MonoBehaviour:
   downKey: 274
   leftKey: 276
   rightKey: 275
+  jumpKey: 305
   animator: {fileID: 1866987886844931550}
 --- !u!114 &4312522600277361047
 MonoBehaviour:
@@ -193,8 +194,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 10
+  m_AngularDrag: 0
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:

@@ -27,15 +27,15 @@ public class HappinessController : MonoBehaviour
 
     public void Change(float value)
     {
-        _value += value * elapsedTime * 0.03f;
+        _value += value * elapsedTime * 0.03f * -1f;
         slider.Set(_value);
         if (_value >= 1f)
         {
-            GameOver?.Invoke(HappinessInfluence.Positive);
+            GameOver?.Invoke(HappinessInfluence.Negative);
         }
         else if (_value <= 0f)
         {
-            GameOver?.Invoke(HappinessInfluence.Negative);
+            GameOver?.Invoke(HappinessInfluence.Positive);
         }
 
         if (_value < 0.5f && _currentType != Type.Negative)
