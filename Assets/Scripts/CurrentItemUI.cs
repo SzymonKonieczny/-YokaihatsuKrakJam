@@ -25,9 +25,11 @@ public class CurrentItemUI : MonoBehaviour
         {
             case PlayerType.Panna:
                 pannaImage.sprite = itemsSprites.Find(p => p.ID == id).Sprite;
+                pannaImage.enabled = id != ItemID.Empty;
                 break;
             case PlayerType.Tesciowa:
                 tesciowaImage.sprite = itemsSprites.Find(p => p.ID == id).Sprite;
+                tesciowaImage.enabled = id != ItemID.Empty;
                 break;
         }
     }

@@ -70,8 +70,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.22, y: -1.39}
-  m_SizeDelta: {x: 115.89, y: 114.59}
+  m_AnchoredPosition: {x: 0.28, y: -0.44}
+  m_SizeDelta: {x: 146.21, y: 148.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1733792166923459884
 CanvasRenderer:
@@ -88,7 +88,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1191990485990002664}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -220,8 +220,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.53, y: 0.79}
-  m_SizeDelta: {x: 114.35, y: 113.83}
+  m_AnchoredPosition: {x: -0.37, y: -0.41}
+  m_SizeDelta: {x: 149.63, y: 149.71}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &4321266556346795016
 CanvasRenderer:
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1463258088802159714}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -327,7 +327,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a7b5ee76c3f9e3d4f940e8767bd751ab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1f729b78375c6594a80a50ec2e103f64, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -671,7 +671,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: a7b5ee76c3f9e3d4f940e8767bd751ab, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3137d1f3aea599d44bd8b3a47e6d99e3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -793,10 +793,10 @@ MonoBehaviour:
   smoothSpeed: 1
   minOrthoSize: 5
   maxOrthoSize: 7
-  minX: -1.7
-  maxX: 3.9
-  minY: -7.9
-  maxY: 8.73
+  minX: -5.33
+  maxX: 7.41
+  minY: -9.35
+  maxY: 9.9
 --- !u!114 &2590203132493589
 MonoBehaviour:
   m_ObjectHideFlags: 0
