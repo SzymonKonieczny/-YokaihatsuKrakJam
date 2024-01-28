@@ -21,16 +21,25 @@ public class GameManager : MonoBehaviour
     {
         TimePassed += Time.deltaTime;
 
-        if((int)TimePassed % 30 == 0)
+        if((int)TimePassed % 20 == 0)
         {
             unitManager.SpawnNPC();
             unitManager.SpawnNPC();
+            unitManager.SpawnNPC();
+            unitManager.SpawnNPC();
+            unitManager.SpawnNPC();
+            unitManager.SpawnNPC();
+
             TimePassed += 1;
 
         }
-        if ((int)TimePassed % 15 == 0)
+        if ((int)TimePassed % 10 == 0)
         {
             TimePassed += 1;
+            unitManager.SpawnItemPair();
+            unitManager.SpawnItemPair();
+            unitManager.SpawnItemPair();
+            unitManager.SpawnItemPair();
             unitManager.SpawnItemPair();
             unitManager.SpawnItemPair();
 

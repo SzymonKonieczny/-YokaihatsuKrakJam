@@ -219,7 +219,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d20e7465e846a5945a98f27d54d8f27e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractItem: 6
   type: 0
+  movementScript: {fileID: 6234579995821662143}
   radius: 2
   interactionKey: 32
 --- !u!50 &3705500923538057178

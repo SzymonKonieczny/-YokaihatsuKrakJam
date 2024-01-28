@@ -17,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
 
     void Update()
     {
+        stunTime -= Time.deltaTime;
         Vector3 movement = Vector3.zero;
 
         if (Input.GetKey(upKey))
@@ -41,6 +42,8 @@ public class PlayerMovement : MonoBehaviour
 
         animator.SetFloat(Horizontal, movement.x);
         animator.SetFloat(Vertical, movement.y);
+
+        if (stunTime > 0) movement = new Vector3();
 
         movement = movement.normalized * speed * Time.deltaTime;
 

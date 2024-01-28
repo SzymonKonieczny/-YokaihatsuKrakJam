@@ -75,7 +75,13 @@ enum Mood
     public void Unhighlight()
     {
     }
-
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.tag =="DestinationPoint")
+        {
+            Destroy(this.gameObject);
+        }
+    }
     // Start is called before the first frame update
     void Start()
     {
