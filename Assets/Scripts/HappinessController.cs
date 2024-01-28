@@ -10,6 +10,9 @@ public class HappinessController : MonoBehaviour
     public event Action<HappinessInfluence> GameOver;
     [SerializeField] private HappinessSlider slider;
     private float _value = 0.5f;
+    private Type _currentType = Type.Neutral;
+    
+    
     
     private void Awake()
     {
@@ -28,5 +31,23 @@ public class HappinessController : MonoBehaviour
         {
             GameOver?.Invoke(HappinessInfluence.Negative);
         }
+
+        if (_value < 0.5f && _currentType != Type.Negative)
+        {
+            MusicManager.Instance.PlayMusic(PlayerType.Tesciowa);
+            _currentType = Type.Negative;
+        }
+        if (_value > 0.5f && _currentType != Type.Positive)
+        {
+            MusicManager.Instance.PlayMusic(PlayerType.Panna);
+            _currentType = Type.Positive;
+        }
+    }
+
+    public enum Type
+    {
+        Negative,
+        Neutral,
+        Positive
     }
 }

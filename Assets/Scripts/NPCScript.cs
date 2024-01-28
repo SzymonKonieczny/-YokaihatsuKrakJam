@@ -61,6 +61,7 @@ enum Mood
                 Particles.textureSheetAnimation.AddSprite(Frames[i]);
             }
             Particles.Play();
+            MusicManager.Instance.PlayItemMusic(id, transform.position);
             return ItemID.Empty;
         }
         else return id;
@@ -89,7 +90,7 @@ enum Mood
     void Update()
     {
         TimeAlive += Time.deltaTime;
-        HappinessController.Instance.Change(0.1f * (int)mood * Time.deltaTime);
+        HappinessController.Instance.Change(0.01f * (int)mood * Time.deltaTime);
 
         switch (State)
         {
