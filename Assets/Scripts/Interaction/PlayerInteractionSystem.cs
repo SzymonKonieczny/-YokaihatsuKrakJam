@@ -13,10 +13,13 @@ namespace Interaction
         private List<IInteraction> _currentInteractions  = new List<IInteraction>();
         private IInteraction _nearestInteraction;
         [SerializeField] public KeyCode interactionKey;
+        [SerializeField] public KeyCode dropKey;
+        private UnitManager _unitManager;
 
         private void Start()
         {
             CurrentItemUI.Instance.Set(currentItem, type);
+            _unitManager = FindObjectOfType<UnitManager>();
         }
 
         private void Update()
@@ -35,6 +38,13 @@ namespace Interaction
                     currentItem = newItem;
                     CurrentItemUI.Instance.Set(currentItem, type);
                 }
+            }
+
+            if (Input.GetKeyDown(dropKey))
+            {
+                _unitManager.SpawnItem(currentItem, transform.position);
+                currentItem = ItemID.Empty;
+                CurrentItemUI.Instance.Set(currentItem, type);
             }
         }
 

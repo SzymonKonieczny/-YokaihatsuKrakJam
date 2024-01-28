@@ -69,4 +69,12 @@ public class UnitManager : MonoBehaviour
     {
         return Areas[UnityEngine.Random.Range(0, Areas.Count)].getRandomSpot();
     }
+
+    public void SpawnItem(ItemID id, Vector3 pos)
+    {
+        GameObject Item1GO = Instantiate(ItemPrefab);
+        Item1GO.transform.position = pos;
+        ItemScript Item1 = Item1GO.GetComponent<ItemScript>();
+        Item1.setItemData(id);
+    }
 }

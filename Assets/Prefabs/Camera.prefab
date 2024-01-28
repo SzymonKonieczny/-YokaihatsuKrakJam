@@ -792,7 +792,7 @@ MonoBehaviour:
   player2: {fileID: 0}
   smoothSpeed: 1
   minOrthoSize: 5
-  maxOrthoSize: 7
+  maxOrthoSize: 9
   minX: -5.33
   maxX: 7.41
   minY: -9.35
