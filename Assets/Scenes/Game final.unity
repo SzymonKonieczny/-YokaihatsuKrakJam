@@ -1630,6 +1630,10 @@ PrefabInstance:
       propertyPath: m_LocalScale.y
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 5917301590902109344, guid: 35fab7c3307dac44aa861f56dd724fb2, type: 3}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8727703540743507289, guid: 35fab7c3307dac44aa861f56dd724fb2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.2744975
@@ -10017,10 +10021,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3817224783230970721, guid: 8db0a7b7ca2f59e429c35bdb4c2fa384, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 5607324067733156191, guid: 8db0a7b7ca2f59e429c35bdb4c2fa384, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.58
@@ -10060,18 +10060,6 @@ PrefabInstance:
     - target: {fileID: 5607324067733156191, guid: 8db0a7b7ca2f59e429c35bdb4c2fa384, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5639544937123446447, guid: 8db0a7b7ca2f59e429c35bdb4c2fa384, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6170590667325994918, guid: 8db0a7b7ca2f59e429c35bdb4c2fa384, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 6170590667325994918, guid: 8db0a7b7ca2f59e429c35bdb4c2fa384, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8054790807076414571, guid: 8db0a7b7ca2f59e429c35bdb4c2fa384, type: 3}
       propertyPath: m_Name
@@ -10382,21 +10370,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 363462940695662747, guid: 90ecf28974b0d1d4cb2b0d10cd359de8, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3800138408545163148, guid: 90ecf28974b0d1d4cb2b0d10cd359de8, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4730969607938920846, guid: 90ecf28974b0d1d4cb2b0d10cd359de8, type: 3}
       propertyPath: m_Name
       value: Player2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5347764553404904809, guid: 90ecf28974b0d1d4cb2b0d10cd359de8, type: 3}
-      propertyPath: type
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5411388682052690879, guid: 90ecf28974b0d1d4cb2b0d10cd359de8, type: 3}
       propertyPath: m_LocalPosition.x
