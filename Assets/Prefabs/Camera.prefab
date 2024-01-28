@@ -327,7 +327,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 1f729b78375c6594a80a50ec2e103f64, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 3137d1f3aea599d44bd8b3a47e6d99e3, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -671,7 +671,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 3137d1f3aea599d44bd8b3a47e6d99e3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1f729b78375c6594a80a50ec2e103f64, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1458,8 +1458,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a979c5d0f39441d44bb4094c819d4077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pannaImage: {fileID: 8191462051620729972}
-  tesciowaImage: {fileID: 7514138134433021989}
+  pannaImage: {fileID: 7514138134433021989}
+  tesciowaImage: {fileID: 8191462051620729972}
   itemsSprites:
   - ID: 1
     Sprite: {fileID: 21300000, guid: 8968562b7ad524c40b8c0cb8ca97f4d5, type: 3}
@@ -1469,6 +1469,10 @@ MonoBehaviour:
     Sprite: {fileID: 21300000, guid: bd371cb8b1a36394db4c4f76bbfb0f81, type: 3}
   - ID: 4
     Sprite: {fileID: 21300000, guid: a8e8eaa9d28d22e458c6597d53679b29, type: 3}
+  - ID: 5
+    Sprite: {fileID: 21300000, guid: 16d040a843a478a44b356266557ca5b9, type: 3}
+  - ID: 6
+    Sprite: {fileID: 21300000, guid: 4a53894edb769684eaa101eb3c2be70d, type: 3}
 --- !u!1 &8455661443343799343
 GameObject:
   m_ObjectHideFlags: 0

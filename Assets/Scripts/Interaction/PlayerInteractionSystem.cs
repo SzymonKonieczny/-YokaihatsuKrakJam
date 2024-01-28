@@ -82,7 +82,7 @@ namespace Interaction
         {
             if(id == InteractItem)
             {
-                movementScript.stunTime = 1.5f;
+                movementScript.stunTime = 4f;
                 return ItemID.Empty;
             }
 

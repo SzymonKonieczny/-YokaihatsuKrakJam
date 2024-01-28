@@ -157,10 +157,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   stunTime: 0
-  upKey: 119
-  downKey: 115
-  leftKey: 97
-  rightKey: 100
+  upKey: 273
+  downKey: 274
+  leftKey: 276
+  rightKey: 275
   animator: {fileID: 1866987886844931550}
 --- !u!114 &4312522600277361047
 MonoBehaviour:
@@ -178,8 +178,8 @@ MonoBehaviour:
   type: 0
   movementScript: {fileID: 6234579995821662143}
   radius: 2
-  interactionKey: 32
-  dropKey: 120
+  interactionKey: 13
+  dropKey: 303
 --- !u!50 &3705500923538057178
 Rigidbody2D:
   serializedVersion: 4

@@ -11,7 +11,7 @@ public class HappinessController : MonoBehaviour
     [SerializeField] private HappinessSlider slider;
     private float _value = 0.5f;
     private Type _currentType = Type.Neutral;
-    
+    private static float elapsedTime = 0;
     
     
     private void Awake()
@@ -19,9 +19,15 @@ public class HappinessController : MonoBehaviour
         if (Instance == null)
             Instance = this;
     }
+
+    private void Update()
+    {
+        elapsedTime += Time.deltaTime;
+    }
+
     public void Change(float value)
     {
-        _value += value;
+        _value += value * elapsedTime * 0.03f;
         slider.Set(_value);
         if (_value >= 1f)
         {
