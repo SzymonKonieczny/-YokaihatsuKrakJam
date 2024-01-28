@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -16,7 +17,27 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
             Instance = this;
         unitManager = FindObjectOfType<UnitManager>();
+        HappinessController.Instance.GameOver += OnGameOver;
     }
+
+    private void OnDestroy()
+    {
+        HappinessController.Instance.GameOver -= OnGameOver;
+    }
+
+    private void OnGameOver(HappinessInfluence result)
+    {
+        switch (result)
+        {
+            case HappinessInfluence.Positive:
+                SceneManager.LoadScene("MainMenu");
+                break;
+            case HappinessInfluence.Negative:
+                SceneManager.LoadScene("badEndingScrne");
+                break;
+        }
+    }
+
     private void Update()
     {
         TimePassed += Time.deltaTime;
