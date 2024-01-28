@@ -174,7 +174,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d20e7465e846a5945a98f27d54d8f27e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  InteractItem: 5
   type: 1
+  movementScript: {fileID: 1745128397408502177}
   radius: 2
   interactionKey: 13
   dropKey: 303

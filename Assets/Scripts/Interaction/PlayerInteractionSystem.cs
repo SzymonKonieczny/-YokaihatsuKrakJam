@@ -8,7 +8,10 @@ namespace Interaction
     public class PlayerInteractionSystem : MonoBehaviour, IInteraction
     {
         private ItemID currentItem;
+        public ItemID InteractItem;
         [SerializeField] private PlayerType type;
+
+        [SerializeField] PlayerMovement movementScript;
         public float radius = 2f;
         private List<IInteraction> _currentInteractions  = new List<IInteraction>();
         private IInteraction _nearestInteraction;
@@ -26,7 +29,7 @@ namespace Interaction
         {
             _currentInteractions = _currentInteractions.Where(p => p != null).ToList();
             
-            if (Input.GetKeyDown(interactionKey))
+            if (Input.GetKeyDown(interactionKey) && movementScript.stunTime<=0)
             {
                 var newNearest = _currentInteractions.OrderBy(p => Vector3.Distance(p.Position, transform.position)).FirstOrDefault();
                 if (_nearestInteraction != newNearest)
@@ -77,7 +80,12 @@ namespace Interaction
         public Vector3 Position => transform.position;
         public ItemID Interact(ItemID id)
         {
-            Debug.Log($"Interaction {id} on {transform.name}");
+            if(id == InteractItem)
+            {
+                movementScript.stunTime = 1.5f;
+                return ItemID.Empty;
+            }
+
             return id;
         }
 

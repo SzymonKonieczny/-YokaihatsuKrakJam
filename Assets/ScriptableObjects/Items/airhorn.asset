@@ -17,4 +17,4 @@ MonoBehaviour:
   Type: 1
   InfluenceValue: 0.05
   sprite: {fileID: 21300000, guid: 8968562b7ad524c40b8c0cb8ca97f4d5, type: 3}
-  color: {r: 0.3418654, g: 0.38639522, b: 0.6226415, a: 1}
+  color: {r: 0.37647057, g: 0.5098437, b: 1, a: 1}
