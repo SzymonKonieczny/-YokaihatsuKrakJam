@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe9b97f8fa1b1a84eb7c29c25c438133, type: 3}
   m_Name: airhorn
   m_EditorClassIdentifier: 
-  id: 0
+  id: 1
   Infuence: 1
   Type: 1
   InfluenceValue: 0.05

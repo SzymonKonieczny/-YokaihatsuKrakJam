@@ -6,7 +6,7 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] float TimePassed = 0;
-    [SerializeField] UnitManager unitManager;
+    UnitManager unitManager;
     public static GameManager Instance { get; private set; }
     public ItemsContainer ItemsContainer;
     public List<NPC_SO> NPCDataContainer = new List<NPC_SO>();
@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
     {
         if (Instance == null)
             Instance = this;
+        unitManager = FindObjectOfType<UnitManager>();
     }
     private void Update()
     {
