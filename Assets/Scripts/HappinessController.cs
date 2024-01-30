@@ -18,6 +18,8 @@ public class HappinessController : MonoBehaviour
     {
         if (Instance == null)
             Instance = this;
+
+        elapsedTime = 0;
     }
 
     private void Update()

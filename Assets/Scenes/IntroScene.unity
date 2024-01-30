@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 485709505}
   - component: {fileID: 485709504}
   - component: {fileID: 485709506}
+  - component: {fileID: 485709507}
   m_Layer: 5
   m_Name: Screen
   m_TagString: Untagged
@@ -220,6 +221,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &485709507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485709501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3bbd1706c89f67b499802e1da3f24d5a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SceneIndex: 1
 --- !u!1 &850318294
 GameObject:
   m_ObjectHideFlags: 0
