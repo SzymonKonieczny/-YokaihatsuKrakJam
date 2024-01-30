@@ -17,7 +17,11 @@ public class GameManager : MonoBehaviour
         if (Instance == null)
             Instance = this;
         unitManager = FindObjectOfType<UnitManager>();
+    }
+    private void Start()
+    {
         HappinessController.Instance.GameOver += OnGameOver;
+
     }
 
     private void OnDestroy()
@@ -30,7 +34,7 @@ public class GameManager : MonoBehaviour
         switch (result)
         {
             case HappinessInfluence.Positive:
-                SceneManager.LoadScene("MainMenu");
+                SceneManager.LoadScene("goodEnding");
                 break;
             case HappinessInfluence.Negative:
                 SceneManager.LoadScene("badEndingScrne");
